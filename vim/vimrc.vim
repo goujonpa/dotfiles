@@ -1,5 +1,20 @@
 " >>>>> Sourced by :so ~/.dotfiles/vim/vimrc.vim in ~/.vimrc
 
+" ===== VUNDLE =====
+" the vim bundle manager
+
+" Be improved, required 
+" doc http://vimdoc.sourceforge.net/htmldoc/starting.html#compatible-default
+set nocompatible
+
+" required
+" http://vimdoc.sourceforge.net/htmldoc/filetype.html
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 
 " ===== COLORS =====
 
