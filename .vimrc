@@ -75,6 +75,20 @@ set softtabstop=4
 " when pushing tab, actually inserts 4 spaces
 set expandtab
 
+" ===== LEADER =====
+" remapped the leader because can't bear \ on an azerty mac keyboard. 
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" ===== BUFFERS =====
+"
+" hidden buffer if modified
+set hidden
+
+" leader + bq = buffer quit, = closes the current buffer and goes to the next
+" one
+nmap <leader>bq :bp <BAR> bd #<CR>
+
 
 " ===== UI =====
 
