@@ -1,0 +1,2 @@
+# ignore all : we don't want our personal files to get into the repo
+*
