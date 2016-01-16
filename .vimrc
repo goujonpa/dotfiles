@@ -75,6 +75,14 @@ set softtabstop=4
 " when pushing tab, actually inserts 4 spaces
 set expandtab
 
+" number of spaces used for autoindent
+set shiftwidth=4
+set autoindent
+
+" break lines when line length increases
+set textwidth=80
+
+
 " ===== LEADER =====
 " remapped the leader because can't bear \ on an azerty mac keyboard. 
 nnoremap <SPACE> <Nop>
