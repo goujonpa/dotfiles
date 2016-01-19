@@ -31,6 +31,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 " http://vimawesome.com/plugin/vim-airline-sad-beautiful-tragic
 Plugin 'bling/vim-airline'
+" https://github.com/Valloric/YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
 
 " plugins addition ending line
 " required
