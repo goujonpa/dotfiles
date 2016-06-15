@@ -1,3 +1,6 @@
 if [ -f ~/.bashrc ]; then 
-    . ~/.bashrc 
+    source ~/.bashrc
+else 
+    echo "WARNING: ~/.bashrc not found"
 fi
+

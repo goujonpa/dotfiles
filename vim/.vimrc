@@ -1,5 +1,11 @@
-" >>>>> Sourced by :so ~/.dotfiles/vim/vimrc.vim in ~/.vimrc
-
+" ========== PERSONAL .vimrc ==========
+"
+" A wise man once said:
+" 'Never copy something you don't understand into your .vimrc'
+"
+" Well, he was right.
+"
+"
 " ===== VUNDLE =====
 " the vim bundle manager
 
@@ -14,6 +20,36 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" let vundle manage vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins (Keep plugin command between vundle#begin/end)
+" http://vimawesome.com/plugin/the-nerd-tree
+Plugin 'scrooloose/nerdtree'
+" http://vimawesome.com/plugin/ctrlp-vim-state-of-grace
+Plugin 'kien/ctrlp.vim'
+" http://vimawesome.com/plugin/vim-airline-sad-beautiful-tragic
+Plugin 'bling/vim-airline'
+" https://github.com/Valloric/YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+
+" plugins addition ending line
+" required
+call vundle#end()
+
+" required
+filetype plugin indent on
+
+" brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
 " ===== COLORS =====
@@ -42,11 +78,38 @@ set softtabstop=4
 " when pushing tab, actually inserts 4 spaces
 set expandtab
 
+" number of spaces used for autoindent
+set shiftwidth=4
+set autoindent
+
+" break lines when line length increases
+set textwidth=80
+
+" ===== BACKSPACE RULES =====
+" Otherwise doesn't work properly
+set backspace=2
+
+
+" ===== LEADER =====
+" remapped the leader because can't bear \ on an azerty mac keyboard. 
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" ===== BUFFERS =====
+"
+" hidden buffer if modified
+set hidden
+
+" leader + bq = buffer quit, = closes the current buffer and goes to the next
+" one
+nmap <leader>bq :bp <BAR> bd #<CR>
+
 
 " ===== UI =====
 
 " set background color
 " set background=dark
+
 
 " shows the ruler
 set number
@@ -107,6 +170,20 @@ set foldnestmax=10
 " :help foldmethod
 set foldmethod=indent
 
+" ===== Vim-airline config =====
+
+" Shows the status bar all the time
+set laststatus=2
+
+" powerline-fonts ?
+" https://github.com/bling/vim-airline
+" let g:airline_powerline_fonts = 1
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " ===== MOVEMENT =====
 
