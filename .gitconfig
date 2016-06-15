@@ -1,0 +1,9 @@
+[user]
+	email = goujonpa@gmail.com
+	name = goujonpa
+[credential]
+	helper = osxkeychain
+[push]
+	default = matching
+[core]
+	editor = vim
