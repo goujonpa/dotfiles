@@ -1,8 +1,13 @@
 # ===== ENV VARS =====
 
-# JENV 
+# JENV
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# ADDED TO PATH
+# - Rabbitmq
+export PATH="/usr/local/sbin:$PATH"
+
 
 # ENV VARIABLES
 export LANG="en_GB.UTF-8"

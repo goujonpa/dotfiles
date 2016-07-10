@@ -9,7 +9,7 @@
 " ===== VUNDLE =====
 " the vim bundle manager
 
-" Be improved, required 
+" Be improved, required
 " doc http://vimdoc.sourceforge.net/htmldoc/starting.html#compatible-default
 set nocompatible
 
@@ -33,6 +33,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 " https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
+" https://github.com/ntpeters/vim-better-whitespace
+Plugin 'ntpeters/vim-better-whitespace'
 
 
 " plugins addition ending line
@@ -51,13 +53,16 @@ filetype plugin indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" ===== WHITESPACE STRIPPING ON SAVE =====
+" Automatically strip whitespace on save (thanks to whitespace plugin)
+autocmd BufWritePre * StripWhitespace
 
 " ===== COLORS =====
 
 " enable syntax highlighting
 syntax enable
 
-" the colorscheme is sourced from ~/.vim/syntax/<colorscheme>.vim by :so ~/.dotfiles/vim/colors/<colorscheme>.vim 
+" the colorscheme is sourced from ~/.vim/syntax/<colorscheme>.vim by :so ~/.dotfiles/vim/colors/<colorscheme>.vim
 colorscheme monokai
 
 " enable italic
@@ -70,7 +75,7 @@ let g:monokai_italic = 1
 " ===== TABS RULES =====
 
 " number of visual space for a tab (visual means visual ie when displaying)
-set tabstop=4 
+set tabstop=4
 
 " number of space for a tab when editing
 set softtabstop=4
@@ -91,7 +96,7 @@ set backspace=2
 
 
 " ===== LEADER =====
-" remapped the leader because can't bear \ on an azerty mac keyboard. 
+" remapped the leader because can't bear \ on an azerty mac keyboard.
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
@@ -139,7 +144,7 @@ set showmatch
 " search as characters are entered
 set incsearch
 
-" highlight matches 
+" highlight matches
 set hlsearch
 
 " possibility to map a "stop highlight please" key
@@ -201,5 +206,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " highlight last inserted text
 " nnoremap gV `[v`]
+
+" ===== ctrlP =====
+" set the base working directory to current directory
+let g:ctrlp_working_path_mode = 'c'
 
 
